@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transicio0nes y animaciones</title>
+    <style>
+      .caja {
+        background-color: #09f;
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        line-height: 200px;
+        font-weight: 100;
+        transition: all 1s steps(4);
+        &:hover {
+          background-color: deeppink;
+          color: #fff;
+          font-weight: 900;
+        }
+      }
+      .caja2 {
+        background-color: green;
+        color: aliceblue;
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        line-height: 200px;
+        transition: all 1s;
+        &:hover {
+          transform: translate(10px, -20px) scale(1.2) skew(0, 20deg);
+        }
+      }
+      .mi-elemento {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        border-radius: 100%;
+/*         animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-name: achicando;
+        animation-duration: 2000ms; */
+        animation: infinite achicando 2000ms alternate linear
+      }
+
+      @keyframes achicando {
+        0% {
+          background-color: salmon;
+        }
+
+        100% {
+          background-color: peachpuff;
+          transform: scale(1.5);
+          opacity: 0.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Transicio0nes y animaciones</h1>
+    <div class="mi-elemento"></div>
+    <div class="caja">Transicion de color</div>
+    <div class="caja2">Transformaciones</div>
+  </body>
+</html>
